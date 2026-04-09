@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REKTGUY - A Life Philosophy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F1DEB3;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            color: #000;
+            line-height: 1.2;
+        }
+
+        .ticker-strip {
+            background-color: #000;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            padding: 20px 0;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            position: relative;
+        }
+
+        .ticker-container {
+            display: flex;
+            animation: scroll-infinite 20s linear infinite;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            flex-shrink: 0;
+        }
+
+        @keyframes scroll-infinite {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .header-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+            font-size: 24px;
+        }
+
+        .header-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .definition-title {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 24px;
+            letter-spacing: 4px;
+        }
+
+        .phonetic {
+            font-size: 22px;
+            font-style: italic;
+            margin-bottom: 32px;
+            letter-spacing: 2px;
+        }
+
+        .definition-text {
+            font-size: 24px;
+            line-height: 2.0;
+            text-align: left;
+            max-width: 500px;
+            letter-spacing: 1px;
+        }
+
+        .definition-text p {
+            margin-bottom: 16px;
+        }
+
+        .hero-section {
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+            padding: 80px 60px;
+        }
+
+        .hero-image {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 380px;
+            height: auto;
+        }
+
+        .hero-content {
+            flex-shrink: 0;
+            padding: 30px;
+        }
+
+        .contract-section {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 3px solid #000;
+        }
+
+        .contract-label {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .contract-address {
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            word-break: break-all;
+            background-color: #F1DEB3;
+            padding: 12px;
+            border: 2px solid #000;
+            letter-spacing: 1px;
+        }
+
+        .roadmap-section {
+            padding: 100px 60px;
+            text-align: center;
+            background-color: #F1DEB3;
+        }
+
+        .roadmap-title {
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 80px;
+            letter-spacing: 4px;
+        }
+
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .roadmap-item {
+            text-align: center;
+        }
+
+        .roadmap-milestone {
+            font-size: 40px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        .roadmap-text {
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 1.8;
+            letter-spacing: 2px;
+        }
+
+        .footer {
+            background-color: #F1DEB3;
+            padding: 50px 30px;
+            text-align: center;
+            border-top: 3px solid #000;
+            font-size: 16px;
+            line-height: 2.0;
+            letter-spacing: 1px;
+        }
+
+        .footer p {
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                gap: 40px;
+                padding: 40px 20px;
+                min-height: auto;
+            }
+
+            .hero-image img {
+                max-width: 250px;
+            }
+
+            .definition-text {
+                max-width: 100%;
+            }
+
+            .roadmap-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header style="display: flex; justify-content: center; align-items: center; padding: 20px 40px; border-bottom: 3px solid #000; background-color: #F1DEB3;">
+        <div style="font-size: 36px; font-weight: 900; letter-spacing: 3px;">REKTGUY</div>
+    </header>
+
+    <!-- TICKER STRIP -->
+    <div class="ticker-strip">
+        <div class="ticker-container">
+            <div class="ticker-content">
+                $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY
+            </div>
+            <div class="ticker-content">
+                $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY $REKTGUY
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-image">
+            <img src="bagsholder.png" alt="REKTGUY Character">
+        </div>
+        <div class="hero-content">
+            <div class="definition-title">REKTGUY</div>
+            <div class="phonetic">/rɛkt gaɪ/ n.</div>
+            <div class="definition-text">
+                <p>guy who bought the top and never left.</p>
+                <p>down 94% but calls it "long term".</p>
+                <p>refuses to sell, refuses to learn.</p>
+                <p>turns losses into life philosophy.</p>
+                <p>blames market makers, never himself.</p>
+                <p>portfolio gone. conviction remains.</p>
+            </div>
+            <div class="contract-section">
+                <div class="contract-label">CA:</div>
+                <div class="contract-address">TBA</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROADMAP SECTION -->
+    <section class="roadmap-section bg-white border-t-2 border-b-2 border-black">
+        <div class="roadmap-title">ROADMAP</div>
+        <div class="roadmap-grid">
+            <div class="roadmap-item">
+                <div class="roadmap-milestone">1M</div>
+                <div class="roadmap-text">"just a dip"</div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-milestone">10M</div>
+                <div class="roadmap-text">tweeting cope</div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-milestone">50M</div>
+                <div class="roadmap-text">deleting history</div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-milestone">100M</div>
+                <div class="roadmap-text">long term investor</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p><strong>REKTGUY</strong> is a memecoin with no utility or value.</p>
+        <p>for entertainment purposes only.</p>
+        <p>if you expect profit, you are the product.</p>
+    </footer>
+</body>
+</html>
