@@ -141,6 +141,62 @@
             letter-spacing: 1px;
         }
 
+        .contract-container {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .contract-address-wrapper {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .copy-btn {
+            background-color: #000;
+            color: #fff;
+            border: 2px solid #000;
+            padding: 8px 16px;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .copy-btn:hover {
+            background-color: #333;
+            transform: scale(1.05);
+        }
+
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
+
+        .copy-feedback {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #000;
+            color: #fff;
+            padding: 12px 20px;
+            border: 2px solid #000;
+            font-weight: bold;
+            border-radius: 4px;
+            z-index: 1000;
+            animation: fadeInOut 2s ease-in-out;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
         .roadmap-section {
             padding: 100px 60px;
             text-align: center;
@@ -252,8 +308,25 @@
             </div>
             <div class="contract-section">
                 <div class="contract-label">CA:</div>
-                <div class="contract-address">TBA</div>
+                <div class="contract-container">
+                    <div class="contract-address-wrapper">
+                        <div class="contract-address" id="contractAddress">CgChJoP97hSu1j8MYvsrkvu8YjeHSSH9FHetnmXkpump</div>
+                    </div>
+                    <button class="copy-btn" onclick="copyToClipboard()">COPY</button>
+                </div>
             </div>
+            <script>
+                function copyToClipboard() {
+                    const address = document.getElementById('contractAddress').textContent;
+                    navigator.clipboard.writeText(address).then(() => {
+                        const feedback = document.createElement('div');
+                        feedback.className = 'copy-feedback';
+                        feedback.textContent = 'Copied to clipboard!';
+                        document.body.appendChild(feedback);
+                        setTimeout(() => feedback.remove(), 2000);
+                    });
+                }
+            </script>
         </div>
     </section>
 
